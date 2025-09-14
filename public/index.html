@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title> RankTrackr</title>
+<style>
+    body { font-family: Arial, sans-serif; margin:0; padding:0; background:#f8f9fa; }
+
+    /* Centered header & footer with max-width */
+    header, footer { background:#333; color:#fff; padding:20px 0; }
+    .container { max-width:1200px; margin:0 auto; padding:0 20px; position:relative; }
+
+    header a.login-btn { 
+        position:absolute; right:20px; top:50%; transform:translateY(-50%);
+        padding:8px 16px; background:#4285F4; color:#fff; text-decoration:none; border-radius:5px;
+        font-weight:bold;
+        transition: all 0.3s ease;
+    }
+    header a.login-btn:hover {
+        background:#3367D6;
+        transform: translateY(-50%) scale(1.05);
+    }
+
+    main { max-width:1200px; margin:40px auto; background:#fff; padding:30px; border-radius:10px; box-shadow:0 4px 15px rgba(0,0,0,0.1); }
+    h1,h2 { margin:0 0 20px 0; }
+    input { width:100%; max-width:400px; padding:10px; margin:8px 0; border:1px solid #ccc; border-radius:5px; }
+    
+    button { padding:10px 25px; margin:10px 0; border:none; border-radius:5px; color:#fff; cursor:pointer; font-weight:bold; transition: all 0.3s ease; }
+    button.keyword { background:#34A853; }
+    button.keyword:hover { background:#2C974B; transform: scale(1.05); }
+    button.searchconsole { background:#EA4335; }
+    button.searchconsole:hover { background:#D93025; transform: scale(1.05); }
+
+    pre { text-align:left; max-width:100%; margin:20px auto; background:#f0f0f0; padding:15px; border-radius:5px; overflow-x:auto; }
+    form { margin-bottom:30px; }
+</style>
+</head>
+<body>
+<header>
+    <div class="container">
+        <h1>🚀 RankTrackr</h1>
+        <a href="/login" class="login-btn">Login</a>
+    </div>
+</header>
+<main>
+    <!-- Search Console on Top -->
+    <h2>🌐 Search Console</h2>
+    <form id="scForm">
+        <input type="text" name="siteUrl" placeholder="Website URL (https://...)" required /><br/>
+        <button type="submit" class="searchconsole">Fetch Search Console Data</button>
+    </form>
+    <pre id="scResult"></pre>
+
+    <!-- Keyword Planner below -->
+    <h2>🔑 Keyword Planner</h2>
+    <form id="keywordForm">
+        <input type="text" name="developer_token" placeholder="Developer Token" required /><br/>
+        <input type="text" name="mcc_id" placeholder="MCC ID" required /><br/>
+        <input type="text" name="customer_id" placeholder="Sub-Customer ID" required /><br/>
+        <input type="text" name="keyword" placeholder="Keyword" required /><br/>
+        <button type="submit" class="keyword">Get Keyword Ideas</button>
+    </form>
+    <pre id="keywordResult"></pre>
+</main>
+<footer>
+    <div class="container">
+        <p>&copy; 2025 Alauddin | All rights reserved</p>
+    </div>
+</footer>
+
+<script src="searchconsole.js"></script>
+<script src="keywordplanner.js"></script>
+</body>
+</html>
