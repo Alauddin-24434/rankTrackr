@@ -19,7 +19,6 @@
     "express": "^5.1.0",
     "express-session": "^1.18.2",
     "google-ads-api": "^21.0.1",
-    "google-auth-library": "^10.3.0",
     "googleapis": "^159.0.0",
     "node-fetch": "^2.7.0",
     "nodemon": "^3.1.10"

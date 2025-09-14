@@ -26,9 +26,6 @@ importers:
       google-ads-api:
         specifier: ^21.0.1
         version: 21.0.1
-      google-auth-library:
-        specifier: ^10.3.0
-        version: 10.3.0
       googleapis:
         specifier: ^159.0.0
         version: 159.0.0
